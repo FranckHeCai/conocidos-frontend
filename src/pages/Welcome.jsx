@@ -10,7 +10,7 @@ const Welcome = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    setPlayer({...player, score:0})
+    setPlayer({...player, score:0, isHost: false})
   }, [])
   
 
