@@ -16,6 +16,11 @@ export const getPlayers = async (roomCode) => {
  return players.data
 }
 
+export const getPlayer = async (playerId) => {
+  const players = await i.get(`/players/nickname/${playerId}`)
+ return players.data
+}
+
 export const createPlayer = async (player) => {
   const createdPlayer = await i.post('/players', player)
   return createdPlayer.data

@@ -55,7 +55,7 @@ const JoinRoom = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 p-5 w-full h-screen">
+    <div className="mosaic-question flex flex-col items-center justify-center gap-4 p-5 w-full h-screen">
       <h1 className="text-xl sm:text-3xl">Unirse a sala</h1>
       <form className="w-full max-w-sm flex flex-col gap-4" onSubmit={(event) => {handleSubmit(event)}}>
         <div className="flex flex-col gap-2">

@@ -100,7 +100,7 @@ const Lobby = () => {
   }
 
   return (
-    <div className="w-full h-screen flex flex-col gap-5 sm:gap-10 justify-center items-center p-2">
+    <div className="mosaic-avatar w-full h-screen flex flex-col gap-5 sm:gap-10 justify-center items-center p-2">
       <div className="w-full sm:w-sm">
         <div className="p-3 bg-white/90 rounded-md shadow-md relative">
           <h1 className="text-sm sm:text-base font-light text-center text-black/50">Código de sala</h1>
@@ -137,7 +137,7 @@ const Lobby = () => {
         }} className={`cursor-pointer border-2 border-amber-900 px-8 py-2 text-sm sm:text-lg text-white ${player.isReady ? "bg-emerald-500 active:bg-emerald-700 active:border-emerald-800" : "bg-red-500 active:bg-red-700 active:border-red-800"} rounded`}>
           Listo
         </button>
-        <button onClick={handleLeave} className="border-2 border-red-500 px-8 py-2 text-red-500 text-sm sm:text-lg cursor-pointer  active:bg-red-700 active:border-red-800 rounded">
+        <button onClick={handleLeave} className="border-2 bg-amber-50 border-red-500 px-8 py-2 text-red-500 text-sm sm:text-lg cursor-pointer  active:bg-red-700 active:border-red-800 rounded">
           Salir de sala
         </button>
       </div>

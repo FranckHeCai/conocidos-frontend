@@ -143,7 +143,7 @@ const Questions = () => {
   };
 
   return (
-    <div className="p-2 flex flex-col gap-5 w-full h-screen items-center justify-center">
+    <div className="mosaic-question p-2 flex flex-col gap-5 w-full h-screen items-center justify-center">
       
       
       {createdQuestions < maxQuestions 

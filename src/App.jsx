@@ -19,18 +19,14 @@ function App() {
         <BrowserRouter>
         <Routes>   
             <Route index element={<Start />} />
-
-            <Route element={<Layout />}>
-              <Route path="/welcome" element={<Welcome />} />
-              <Route path="/lobby" element={<Welcome />} />
-              <Route path="/create-room" element={<CreateRoom />} />
-              <Route path="/join-room" element={<JoinRoom />} />
-              <Route path="/questions/:roomId" element={<Questions />} />
-              <Route path="/lobby/:roomCode" element={<Lobby />} />
-              <Route path="/game/:roomId" element={<Game />} />
-            </Route>
-              <Route path="/end/:roomId" element={<Leaderboard />} />
-
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/lobby" element={<Welcome />} />
+            <Route path="/create-room" element={<CreateRoom />} />
+            <Route path="/join-room" element={<JoinRoom />} />
+            <Route path="/questions/:roomId" element={<Questions />} />
+            <Route path="/lobby/:roomCode" element={<Lobby />} />
+            <Route path="/game/:roomId" element={<Game />} />
+            <Route path="/end/:roomId" element={<Leaderboard />} />
             <Route path="*" element={<Error />} />
         </Routes>
     </BrowserRouter>

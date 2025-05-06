@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useTriviaStore } from "../store/store";
 import { useEffect, useRef, useState } from "react";
 import {io} from 'socket.io-client';
-import { getAnswers, getQuestions, updatePlayer } from "../services/api";
+import { getAnswers, getPlayer, getQuestions, updatePlayer } from "../services/api";
 
 const Game = () => {
   const { roomId } = useParams()
@@ -12,6 +12,7 @@ const Game = () => {
   const [currentAnswers, setCurrentAnswers] = useState([])
   const [isAnswered, setIsAnswered] = useState(false);
   const [fetchedQuestions, setFetchedQuestions] = useState([])
+  const [playerNickname, setPlayerNickname] = useState('')
   const [finished, setFinished] = useState(false)
   const navigate = useNavigate()
     
@@ -46,11 +47,18 @@ const Game = () => {
       const currentAnswers = await getAnswers(questionId)
       setCurrentAnswers(currentAnswers)
     }
+    const fetchNickname = async (playerId) => {
+      const data = await getPlayer(playerId)
+      console.log('fetched player nickname: ', data)
+      setPlayerNickname(data.nickname)
+    }
     if (fetchedQuestions.length > 0){
       const currentQuestion = fetchedQuestions[questionIndex]
       setQuestion(currentQuestion)
       fetchAnswers(currentQuestion.id)
+      fetchNickname(currentQuestion.playerId)
     }
+
 
   }, [fetchedQuestions, questionIndex])
 
@@ -85,13 +93,12 @@ const Game = () => {
   }
 
     return (
-        <div className="p-2 flex flex-col gap-5 items-center justify-center min-h-screen bg-gradient-to-r from-amber-300 to-orange-500/70 text-white">
-            <h1 className="text-4xl">Trivia Party</h1>
+        <div className="mosaic-game opac p-2 flex flex-col gap-5 items-center justify-center min-h-screen bg-gradient-to-r from-amber-300 to-orange-500/70 text-white">
             <div className="w-full max-w-4xl bg-white text-black rounded-lg shadow-lg p-6">
               { finished
                 ? <p>Esperando que los demás terminen de contestar...</p>
                 : <div>
-                    <h2 className="text-2xl font-semibold mb-4 text-center">Pregunta</h2>
+                    <h2 className="text-2xl font-semibold mb-4 text-center">Pregunta de {playerNickname}</h2>
                     <p className="text-lg mb-6 text-center">{question?.question_text}</p>
                     <div className="grid sm:grid-cols-2 gap-4">
                         { // fetchedQuestions.length>0

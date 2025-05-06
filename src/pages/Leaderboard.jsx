@@ -60,7 +60,7 @@ const Leaderboard = () => {
   }
 
   return (
-    <div className="flex flex-col p-2 items-center justify-center min-h-screen bg-gradient-to-b from-amber-300 to-orange-500/70 text-white">
+    <div className="mosaic-end opac flex flex-col p-2 items-center justify-center min-h-screen bg-gradient-to-b from-amber-300 to-orange-500/70 text-white">
       <div className="w-full sm:w-lg px-5">
         <h1 className="text-center text-xl sm:text-4xl py-1 rounded-tl-xl rounded-tr-xl bg-amber-600">Final de partida</h1>
       </div>

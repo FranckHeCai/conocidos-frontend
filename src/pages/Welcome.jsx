@@ -33,7 +33,7 @@ const Welcome = () => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen p-2 sm:p-5 gap-6 sm:gap-6" >
+    <div className="mosaic-avatar2 flex flex-col items-center justify-center w-full h-screen p-2 sm:p-5 gap-6 sm:gap-6" >
       <div className="flex flex-col w-full text-center text-amber-950 items-center justify-center">
         <h1 className="text-lg sm:text-xl ">Bienvenido, </h1>
         <h2 className="text-3xl sm:text-4xl font-medium">{player.nickname}!</h2>
