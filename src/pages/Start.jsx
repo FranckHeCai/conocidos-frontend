@@ -27,11 +27,11 @@ const Start = () => {
   
 
   return (
-    <div className="flex flex-col gap-5 sm:gap-10 p-2 sm:p-10 justify-center items-center  min-h-screen">
+    <div className="mosaic-avatar flex flex-col gap-5 p-2 justify-center items-center  sm:min-h-screen">
       {/* <h1 className="text-center text-lg sm:text-xl md:text-3xl font-medium">Super Trivia Party</h1> */}
       <div className="w-full max-w-3xl flex flex-col justify-center items-center">
         <picture>
-          <img className="w-1/2 sm:w-1/3 mx-auto" src="/logo.png" alt="logo icon" />
+          <img className="w-1/2 sm:w-1/4 mx-auto" src="/logo.png" alt="logo icon" />
         </picture>
         {/* <picture>
           <img className="w-sm" src="/thumbnail.png" alt="" />
@@ -42,7 +42,7 @@ const Start = () => {
       >
         <form onSubmit={(event) => {
          handleSubmit(event)
-        }} className="flex flex-col p-2 sm:p-7 rounded-lg gap-1 sm:gap-5 border-2 border-amber-950">
+        }} className="bg-orange-200 shadow flex flex-col p-2 sm:p-4 rounded-lg gap-1 border-2 border-amber-950">
           <div className="flex flex-col gap-2 text-center ">
             <label className="text-lg">Ingresa tu apodo</label>
             <input required value={player.nickname} onChange={(event)=>{
