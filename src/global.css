@@ -75,6 +75,20 @@ body {
   opacity: 0.1;
   z-index: -1;
 }
+
+.mosaic-error::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background/mosaic-error.png');
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.1;
+  z-index: -1;
+}
 .opac::before{
   opacity: 0.5;
 }
