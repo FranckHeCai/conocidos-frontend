@@ -13,7 +13,7 @@ const Leaderboard = () => {
   const navigate = useNavigate()
   const socketRef = useRef()
   if (!socketRef.current) {
-    socketRef.current = io('http://localhost:3000')
+    socketRef.current = io('https://conocidos-backend-production.up.railway.app')
   }
   const socket = socketRef.current;
   useEffect(() => {

@@ -17,7 +17,7 @@ const Lobby = () => {
 
   const socketRef = useRef()
   if (!socketRef.current) {
-    socketRef.current = io('http://localhost:3000')
+    socketRef.current = io('https://conocidos-backend-production.up.railway.app')
   }
   const socket = socketRef.current
   const { roomPlayers, setRoomPlayers, player, setPlayer, room, showSettings, setShowSettings } = useTriviaStore(state => state)

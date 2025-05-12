@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const i = axios.create({ baseURL: 'http://localhost:3000' });
+export const i = axios.create({ baseURL: 'https://conocidos-backend-production.up.railway.app' });
 
 export const createRoom = async room =>{
   const createdRoom = await i.post('/rooms', room)
