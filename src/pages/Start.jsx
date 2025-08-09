@@ -27,7 +27,7 @@ const Start = () => {
   
 
   return (
-    <div className="mosaic-avatar flex flex-col gap-5 p-2 justify-center items-center  sm:min-h-screen">
+    <div className="mosaic-avatar flex flex-col gap-5 p-2 justify-center items-center min-h-screen">
       {/* <h1 className="text-center text-lg sm:text-xl md:text-3xl font-medium">Super Trivia Party</h1> */}
       <div className="w-full max-w-3xl flex flex-col justify-center items-center">
         <picture>
